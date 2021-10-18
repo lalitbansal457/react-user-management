@@ -1,4 +1,5 @@
-
+import Card from '../UI/Card';
+import classes from "./AddUser.module.css";
 
 const AddUser = props => {
 
@@ -7,15 +8,17 @@ const AddUser = props => {
 	}
 
 	return (
-		<form onSubmit={addUserHandler}>
-			<label htmlFor="username">Username</label>
-			<input type="text" id="username" / >
+		<Card className={classes.input}>
+			<form onSubmit={addUserHandler}>
+				<label htmlFor="username">Username</label>
+				<input type="text" id="username" / >
 
-			<label htmlFor="username">Age (Years)</label>
-			<input type="number" id="age" / >	
+				<label htmlFor="username">Age (Years)</label>
+				<input type="number" id="age" / >	
 
-			<button type="submit">Add User</button>
-		</form>
+				<button type="submit">Add User</button>
+			</form>
+		</Card>
 	)
 }
 
